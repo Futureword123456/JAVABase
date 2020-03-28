@@ -39,7 +39,6 @@ public class Hero1 {
         hero1.name = "杨华钟";
         hero1.moveSpeed = 1000;
         hero1.addSpeed(100);
-
         System.out.println(hero1.moveSpeed);
     }
 }
