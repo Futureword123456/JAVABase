@@ -20,6 +20,20 @@ public class Hero1 {
         moveSpeed = moveSpeed + speed;
     }
 
+    void legendary() {
+        System.out.println("超神啦！！！");
+    }
+
+    //获取当前血量
+    float getHp() {
+        return hp;
+    }
+
+    //回血
+    float recovery(float blood) {
+        return hp - blood;
+    }
+
     public static void main(String[] args) {
         Hero1 hero1 = new Hero1();
         hero1.name = "杨华钟";
