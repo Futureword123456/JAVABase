@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <title>函数式编程</title>
     <script type="text/javascript">
-        /* let a = new Date();
-         document.write(a);
-         var d = new Date();
-         document.write(d);*/
-        var o = new Object();
-        var e = o;
-        if (o == e)
-            document.write("ok");
+        /*     /!* let a = new Date();
+              document.write(a);
+              var d = new Date();
+              document.write(d);*!/
+
+             const o = new Object();//==var o=3;
+             /!*const e = {
+                 a: 3, b: "abc", c: true, d: function (x) {
+                     alert("cjdx");
+                 }
+             };*!/
+             o.b = "abc";
+             o.a = 3;
+             o.d = function (x) {
+                 alert(x)
+
+             };
+             /!*var e = o;
+             if (o == e)*!/
+             //document.write(e.d());
+             const x1 = Math.sin(30 * Math.PI / 180);
+             document.write(x1);*/
+
+        function obj() {
+            this.a = 3;
+            this.b = "abc";
+            this.c = true;
+            this.d = function (x) {
+                alert(x)
+            }
+        }
+
+        const o1 = new obj();
+        const o2 = new obj();
+        o1.d("长江大学");
+        document.write(o1.b);
     </script>
 </head>
 <body>
