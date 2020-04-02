@@ -5,7 +5,7 @@ public class HelloWorld4 {
         int i;
         for (i = 1; i < 10; i++) {
             double salary = Math.pow(2, (i - 1));
-            System.out.println("第十天收入是" + salary);
+            System.out.println("第十天入是" + salary);
         }
 
 
