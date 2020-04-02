@@ -27,19 +27,42 @@
              const x1 = Math.sin(30 * Math.PI / 180);
              document.write(x1);*/
 
-        function obj() {
-            this.a = 3;
-            this.b = "abc";
-            this.c = true;
-            this.d = function (x) {
-                alert(x)
+        /* function obj() {
+             this.a = 3;//实例化后的对象
+             this.b = "abc";
+             this.c = true;
+             this.d = function (x) {
+                 alert(x)
+             }
+         }
+
+         const o1 = new obj();
+         const o2 = new obj();
+         o1.d("长江大学");
+         document.write(o1.b);*/
+
+        function pen(name, price, color) {
+            this.name = name;
+            this.price = price;
+            this.color = color;
+            this.w = function (s) {
+                document.write("<span style='color: red'>")
+
             }
         }
 
-        const o1 = new obj();
-        const o2 = new obj();
-        o1.d("长江大学");
-        document.write(o1.b);
+        var p1 = new pen("钢笔", 20, "red");
+        var p2 = new pen("彩笔", 10, "#00f");
+        var p3 = new pen("钢笔", 20, "red");
+        p3.color = "#999";
+        p3.id = "120";
+        p3.fu = function () {
+            return 55;
+
+        }
+        document.write(p1.name + "<br/><hr/>");
+        p1.w("这是p1的文字");
+        p3.w("p3写的" + p3.fu());
     </script>
 </head>
 <body>
