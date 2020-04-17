@@ -11,7 +11,7 @@ public class Hello4 {
         int min = a[0];
         for (int i = 0; i < a.length; i++) {
             //System.out.println(a[i]);
-            if (min > a[i]) {
+            if (min >= a[i]) {
                 min = a[i];
             }
 
