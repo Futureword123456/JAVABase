@@ -21,7 +21,7 @@ public class Hello1 {
 
             }
         }
-        System.out.println("最小值是:" + min);
+        System.out.println(  "最小值是:" + min);
         System.out.print("最大值是:" + max);
 
 //        int max = values[0];
