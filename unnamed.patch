@@ -1,0 +1,83 @@
+Index: src/com/yang/day9/ajax.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/com/yang/day9/ajax.js	(date 1587608772448)
++++ src/com/yang/day9/ajax.js	(date 1587608772448)
+@@ -0,0 +1,25 @@
++var f1 = String.fromCharCode(198);
++var f2 = String.fromCharCode(199);
++
++function ajax(url, send, postback, f, moth) {
++    moth = moth ? "GET" : "POST";
++    var ajx = new XMLHttpRequest();
++    ajx.open(moth, url, !f);
++    ajx.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
++    if (postback) ajx.onreadystatechange = function () {
++        if (ajx.readyState == 4 && ajx.status == 200) postback(ajx.responseText)
++    };
++    ajx.send(send)
++}
++
++function $(id) {
++    return id ? document.getElementById(id) : document.body
++}
++
++function $1(dom) {
++    return dom ? document.querySelector(dom) : document.body
++}
++
++function $a(dom) {
++    return dom ? document.querySelectorAll(dom) : document.body
++}
+\ No newline at end of file
+Index: src/com/yang/day9/Hello.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/com/yang/day9/Hello.html	(date 1587609710758)
++++ src/com/yang/day9/Hello.html	(date 1587609710758)
+@@ -0,0 +1,40 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>Hello</title>
++
++</head>
++<body>
++<h1 align="center">居中标题</h1>
++<p>长江大学</p>
++<b>长江大学</b>
++<br/>
++<strong>窗口大小</strong>
++<div>123</div>
++<i>长江大学</i>
++<em>长江大学1</em>
++<strong><i>长江大学2</i></strong><br/>
++<b><i>长江大学3</i></b>
++<pre>public class HelloWorld {
++
++public static void main(String[] args) {
++System.out.println("Hello World");
++}
++}</pre>
++
++
++<div id="d1" style="color: blue">abcd</div>
++<script type="text/javascript">
++    //var div = document.getElementById("d1");
++    //div.innerHTML = "789";
++    //div.style.fontSize = "60px";
++    //div.style.cssText = "font-size:60px";
++    var div = document.querySelector("div:last");
++    //var div=$a("div");
++
++    div.innerText = "cccc";
++
++</script>
++</body>
++</html>
+\ No newline at end of file
