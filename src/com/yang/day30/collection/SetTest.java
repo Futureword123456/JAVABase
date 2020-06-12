@@ -17,15 +17,15 @@ public class SetTest {
         SetTest setTest = new SetTest();
         setTest.testAdd();
         setTest.testforecah();
-        Student student = new Student(2, "小明");
-        System.out.println("欢同欢迎" + student.name + "学选课");
+        //Student student = new Student(2, "小明");
+        //System.out.println("欢同欢迎" + student.name + "学选课");
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < 3; i++) {
             System.out.println("请输入课程id");
             String courseid = scanner.next();
             for (Course cr : setTest.courseToSelect) {
                 if (cr.id.equals(courseid)) {
-                    student.courses.add(cr);
+                    // student.courses.add(cr);
                     /**
                      * Set中，添加某个对象，无论添加多少次， 最终只会保留一个该对象（的引用）， 并且，保留的是第一次添加的那一个
                      */
@@ -37,7 +37,7 @@ public class SetTest {
 
         }
         //输出课程
-        setTest.testForEachSet(student);
+        //setTest.testForEachSet(student);
 
     }
 
