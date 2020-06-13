@@ -24,8 +24,9 @@ public class MapTest {
         mapTest.testKeySet();
 //        mapTest.testRemove();
 ////        mapTest.testEntrySet();
-        mapTest.testModify();
-        mapTest.testEntrySet();
+//        mapTest.testModify();
+//        mapTest.testEntrySet();
+        mapTest.testContainsKeyOrValue();
     }
 
     /*
@@ -113,6 +114,27 @@ public class MapTest {
             System.out.println("取得键" + entry.getKey());
             System.out.println("对应的值是" + entry.getValue().name);
 
+        }
+    }
+
+    /**
+     * 测试Map中是否包含key或value值
+     */
+    public void testContainsKeyOrValue() {
+        System.out.println("请输入学生ID");
+        Scanner scanner = new Scanner(System.in);
+        String id = scanner.next();
+        System.out.println("你输入的学生ID为" + id + "在学生映射表中" + students.containsKey(id));
+        if (students.containsKey(id)) {
+            System.out.println("对应的学生为" + students.get(id).name);
+        }
+//提示输入学生姓名
+        System.out.println("请输入要查询的学生姓名");
+        String name = scanner.next();
+        if (students.containsValue(new Student(null, name))) {
+            System.out.println("在学生映射表中包含学生的姓名" + name);
+        } else {
+            System.out.println("不存在这样的学生");
         }
     }
 
