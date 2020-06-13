@@ -9,7 +9,8 @@ public class CollectionTest {
     public static void main(String[] args) {
         CollectionTest collectionTest = new CollectionTest();
         // collectionTest.testSort1();
-        collectionTest.testSort2();
+        //collectionTest.testSort2();
+        collectionTest.testSort3();
     }
 
     /**
@@ -44,14 +45,22 @@ public class CollectionTest {
 
     public void testSort3() {
         List<Student> studentList = new ArrayList<Student>();
-        studentList.add(new Student(1 + "", "小名"));
-        studentList.add(new Student(2 + "", "小红"));
-        studentList.add(new Student(3 + "", "小蓝"));
+        Random random = new Random();
+
+
+        studentList.add(new Student(random.nextInt(1000) + "", "Mike"));
+        studentList.add(new Student(random.nextInt(1000) + "", "Angela"));
+        studentList.add(new Student(random.nextInt(1000) + "", "Lucy"));
+        studentList.add(new Student(10000 + "", "Bey"));
         System.out.println("-------------排序前----------------------");
         for (Student student : studentList) {
-            System.out.println("学生" + student.name);
+            System.out.println("学生" + student.id + ":" + student.name);
         }
-        System.out.println("");
+        Collections.sort(studentList);
+        System.out.println("-------------排序后----------------------");
+        for (Student student : studentList) {
+            System.out.println("学生" + student.id + ":" + student.name);
+        }
     }
 
     public void testSort2() {
