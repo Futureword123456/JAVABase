@@ -61,6 +61,11 @@ public class CollectionTest {
         for (Student student : studentList) {
             System.out.println("学生" + student.id + ":" + student.name);
         }
+        Collections.sort(studentList, new StudnetComparator());
+        System.out.println("------------按照姓名排序后------------");
+        for (Student student : studentList) {
+            System.out.println("学生" + student.id + ":" + student.name);
+        }
     }
 
     public void testSort2() {
